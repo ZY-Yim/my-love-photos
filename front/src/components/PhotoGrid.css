@@ -1,0 +1,113 @@
+.photo-grid {
+  padding: 16px;
+  width: 100%;
+}
+
+/* 响应式布局 */
+@media (min-width: 768px) {
+  .photo-grid {
+    padding: 24px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .photo-grid {
+    padding: 32px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .photo-grid {
+    padding: 48px;
+  }
+}
+
+.photo-grid-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+
+.photo-grid-empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  color: #999;
+  font-size: 16px;
+}
+
+.photo-card {
+  height: 100%;
+}
+
+.photo-cover {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+}
+
+/* 响应式图片高度 */
+@media (min-width: 768px) {
+  .photo-cover {
+    height: 200px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .photo-cover {
+    height: 220px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .photo-cover {
+    height: 250px;
+  }
+}
+
+.photo-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.photo-card:hover .photo-thumbnail {
+  transform: scale(1.05);
+}
+
+.photo-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.photo-card:hover .photo-overlay {
+  opacity: 1;
+}
+
+.overlay-button {
+  color: white !important;
+  border-color: white !important;
+}
+
+.overlay-button:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+}
+
+.delete-button:hover {
+  background: rgba(255, 77, 79, 0.2) !important;
+  border-color: #ff4d4f !important;
+  color: #ff4d4f !important;
+}
